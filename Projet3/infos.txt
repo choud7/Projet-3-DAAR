@@ -1,0 +1,22 @@
+Application web/mobile de moteur de recherche de document
+
+1ère étape : Bibliothèque de livres (>1664 livres et >10000 mots).
+2ème étape : Appli (serveur/client) avec moteur de recherche.
+
+Fonctionnalités : 
+-recherche de livres par mot-clé. S => liste des docs dont la table d'indexage contient S.
+-recherche avancée : Regex => liste des docs dont la table d'indexage/contenu textuel contient Regex.
+-Classement des r´eponses des deux fonctionnalit´es de recherche pr´ec´edentes. 
+A la suite d’une réponse `a la fonctionnalit´e recherche, l’application retourne la liste des documents
+tri´ee par un certain crit`ere de pertinence : par nombre d’occurrences du mot-clef dans le document ; par indice de
+centralit´e d´ecroissant dans le graphe de Jaccard, et cetera. Le crit`ere de centralit´e est laiss´e libre `a chaque groupe
+d’interpr´eter. Cependant, il est obligatoire d’utiliser au moins un crit`ere parmi les trois indices vu en cours, `a savoir
+closeness, betweenness, ou pagerank. 
+
+-Une fonctionnalité implicite de suggestion : Suggestion de r´eponses similaires `a la derni`ere recherche. A la suite
+d’une r´eponse `a la fonctionnalit´e recherche, l’application retourne ´egalement : soit la liste des sommets dans le
+graphe de Jaccard qui sont voisins avec les deux ou trois documents textuels les plus pertinents qui contiennent le
+mot-clef ; soit la liste des documents textuels les plus choisis (les plus cliqu´es par d’autres utilisateurs) parmi les
+sommets dans le graphe de Jaccard qui sont voisins avec les deux ou trois documents textuels les plus pertinents qui
+contiennent le mot-clef ; soit une autre liste suivant une strat´egie sp´ecifique qu’on expliquera bien dans le rapport.
+
